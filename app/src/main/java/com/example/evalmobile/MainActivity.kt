@@ -21,12 +21,8 @@ class MainActivity : BaseActivity() {
         })
 
         val buttonEspace=findViewById<Button>(R.id.buttonProduits)
-        buttonEspace.setOnClickListener(View.OnClickListener {
+        buttonEspace.setOnClickListener(View.OnClickListener {val newIntent = Intent(application, CategoriesActivity::class.java)
+            startActivity(newIntent)
         })
-    }
-    private fun showDetailsActivity(url:String,title:String) {
-        val newIntent = Intent(application, DetailsActivity::class.java)
-        newIntent.putExtra("title", title)
-        startActivity(newIntent)
     }
 }
