@@ -21,9 +21,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".DetailsActivity"
-            android:exported="false" />
-        <activity
             android:name=".GroupInfos"
             android:exported="false" >
             <meta-data
