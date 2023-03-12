@@ -3,4 +3,5 @@
     <string name="main_title">EPSI</string>
     <string name="main_button_infos">Infos</string>
     <string name="main_button_produits">Produits</string>
+    <string name="description">Description</string>
 </resources>
