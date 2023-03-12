@@ -10,6 +10,7 @@ class GroupInfos : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group_infos)
         setHeaderTitle(getString(R.string.main_button_infos))
+        showBack()
 
         val luc = Student("Dutheil", "Luc", "john.doe@example.com", "NCL", "Betclic dev", 0)
         val nathan = Student("Tomasian", "Nathan", "nathantomasian@gmaiL.com", "NCL", "Betclic dev",1)
