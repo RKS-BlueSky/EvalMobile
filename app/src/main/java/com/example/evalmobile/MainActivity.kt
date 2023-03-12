@@ -24,7 +24,7 @@ class MainActivity : BaseActivity() {
         buttonEspace.setOnClickListener(View.OnClickListener {
         })
     }
-    private fun showDetailsActivity(url:String,title:String) {
+    private fun showDetailsActivity(title:String) {
         val newIntent = Intent(application, DetailsActivity::class.java)
         newIntent.putExtra("title", title)
         startActivity(newIntent)
