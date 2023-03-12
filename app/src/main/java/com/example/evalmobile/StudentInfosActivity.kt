@@ -1,7 +1,11 @@
 package com.example.evalmobile
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
+import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -20,11 +24,9 @@ class StudentInfosActivity : AppCompatActivity() {
         if (student != null) {
             textEmail.text = student.email
             textGroupe.text = student.groupe
-            textEpsi.text = "https://www.epsi.fr/"
             textInfos.text = student.info
             textName.text = "${student.firstName}${student.lastName}"
         }
-
-
+        textEpsi.movementMethod = LinkMovementMethod.getInstance()
     }
 }
