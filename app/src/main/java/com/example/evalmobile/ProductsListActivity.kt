@@ -19,7 +19,7 @@ class ProductsListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products_list)
 
-        /*val link = intent.getStringExtra("link")
+        val link = intent.getStringExtra("link")
 
         GlobalScope.launch(Dispatchers.IO) {
             val client = OkHttpClient()
@@ -42,6 +42,6 @@ class ProductsListActivity : AppCompatActivity() {
                     products.add(product)
                 }
             }
-        }*/
+        }
     }
 }
