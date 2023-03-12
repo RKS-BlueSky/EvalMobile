@@ -3,5 +3,6 @@
     <string name="main_title">EPSI</string>
     <string name="main_button_infos">Infos</string>
     <string name="main_button_produits">Produits</string>
+    <string name="epsi_link"><a href="https://www.epsi.fr/">https://www.epsi.fr</a> </string>
     <string name="description">Description</string>
 </resources>
