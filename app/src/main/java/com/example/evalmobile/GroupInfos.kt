@@ -11,9 +11,9 @@ class GroupInfos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group_infos)
 
-        val luc = Student("Dutheil", "Luc", "john.doe@example.com", "NCL", "Betclic dev")
-        val nathan = Student("Tomasian", "Nathan", "nathantomasian@gmaiL.com", "NCL", "Betclic dev")
-        val clement = Student("Clement", "Temple", "clemtmpl@gmail.com", "NCL", "Vistalid dev")
+        val luc = Student("Dutheil", "Luc", "john.doe@example.com", "NCL", "Betclic dev", 0)
+        val nathan = Student("Tomasian", "Nathan", "nathantomasian@gmaiL.com", "NCL", "Betclic dev",1)
+        val clement = Student("Clement", "Temple", "clemtmpl@gmail.com", "NCL", "Vistalid dev", 2)
 
         val studentList = arrayListOf(luc,nathan,clement)
 
@@ -24,8 +24,8 @@ class GroupInfos : AppCompatActivity() {
             val button = Button(this)
             button.text = student.firstName
             button.setOnClickListener {
-                val intent = Intent(this, GroupInfosActivity::class.java)
-                intent.putExtra("student", "test")
+                val intent = Intent(this, StudentInfosActivity::class.java)
+                intent.putExtra("student", student)
                 startActivity(intent)
             }
             buttonLayout.addView(button)
