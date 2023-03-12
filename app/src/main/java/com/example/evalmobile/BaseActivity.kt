@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.evalmobile.R
 
 open class BaseActivity : AppCompatActivity(){
 
