@@ -21,7 +21,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <Button
+                android:id="@+id/buttonInfos"
+                style="@style/shopButton"
+                android:text="@string/main_button_infos" />
 
+            <Button
+                android:id="@+id/buttonProduits"
+                style="@style/shopButton"
+                android:text="@string/main_button_produits" />
         </LinearLayout>
     </ScrollView>
 

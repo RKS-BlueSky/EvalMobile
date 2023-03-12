@@ -1,6 +1,10 @@
 package com.example.evalmobile
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Button
 
 class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -8,5 +12,21 @@ class MainActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
         setHeaderTitle(getString(R.string.main_title))
 
+        setHeaderTitle(getString(R.string.main_title))
+
+        val button=findViewById<Button>(R.id.buttonInfos)
+        button.setOnClickListener(View.OnClickListener {
+            val newIntent = Intent(application, GroupInfos::class.java)
+            startActivity(newIntent)
+        })
+
+        val buttonEspace=findViewById<Button>(R.id.buttonProduits)
+        buttonEspace.setOnClickListener(View.OnClickListener {
+        })
+    }
+    private fun showDetailsActivity(url:String,title:String) {
+        val newIntent = Intent(application, DetailsActivity::class.java)
+        newIntent.putExtra("title", title)
+        startActivity(newIntent)
     }
 }
