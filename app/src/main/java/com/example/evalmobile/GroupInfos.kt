@@ -1,15 +1,15 @@
 package com.example.evalmobile
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
 
-class GroupInfos : AppCompatActivity() {
+class GroupInfos : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_group_infos)
+        setHeaderTitle(getString(R.string.main_button_infos))
 
         val luc = Student("Dutheil", "Luc", "john.doe@example.com", "NCL", "Betclic dev", 0)
         val nathan = Student("Tomasian", "Nathan", "nathantomasian@gmaiL.com", "NCL", "Betclic dev",1)
