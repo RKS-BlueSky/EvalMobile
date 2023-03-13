@@ -10,10 +10,11 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 
-class StudentInfosActivity : AppCompatActivity() {
+class StudentInfosActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_students_info)
+        showBack()
         val student = intent.getParcelableExtra<Student>("student")
         val textEmail = findViewById<TextView>(R.id.textEmail)
         val textEpsi = findViewById<TextView>(R.id.textEpsi)
@@ -25,7 +26,8 @@ class StudentInfosActivity : AppCompatActivity() {
             textEmail.text = student.email
             textGroupe.text = student.groupe
             textInfos.text = student.info
-            textName.text = "${student.firstName}${student.lastName}"
+            setHeaderTitle(student.lastName)
+            textName.text = "${student.firstName} ${student.lastName}"
         }
         textEpsi.movementMethod = LinkMovementMethod.getInstance()
     }

@@ -9,8 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 
 open class BaseActivity : AppCompatActivity(){
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         Log.i("Epsi G2","################ onCreate :"+javaClass.simpleName)
     }
 

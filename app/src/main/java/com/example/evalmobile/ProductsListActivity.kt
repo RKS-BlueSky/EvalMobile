@@ -13,11 +13,13 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
 
-class ProductsListActivity : AppCompatActivity() {
-//    @OptIn(DelicateCoroutinesApi::class)
+class ProductsListActivity : BaseActivity() {
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_products_list)
+        showBack()
+        setHeaderTitle(intent.getStringExtra("title"))
 
         val link = intent.getStringExtra("link")
 

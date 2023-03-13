@@ -13,11 +13,13 @@ import org.json.JSONObject
 import okhttp3.OkHttpClient
 import okhttp3.Request
 
-class CategoriesActivity : AppCompatActivity() {
+class CategoriesActivity : BaseActivity() {
     @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_catgeories)
+        showBack()
+        setHeaderTitle("Rayons")
 
             GlobalScope.launch(Dispatchers.IO) {
                 val client = OkHttpClient()
@@ -47,6 +49,7 @@ class CategoriesActivity : AppCompatActivity() {
                         button.setOnClickListener {
                             val intent = Intent(this@CategoriesActivity, ProductsListActivity::class.java)
                             intent.putExtra("link", item.products_url)
+                            intent.putExtra("title", item.title)
                             startActivity(intent)
                         }
                         buttonLayout.addView(button)
